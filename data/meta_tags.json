@@ -1,0 +1,12 @@
+{
+    "index": {
+        "title": "Chrome Starter Guide",
+        "description": "Master Google Chrome with tips, tricks, and customization guides.",
+        "keywords": ["Google Chrome", "Chrome Flags", "Extensions", "Themes"]
+    },
+    "install_chrome": {
+        "title": "Install Chrome - A Step-by-Step Guide",
+        "description": "Learn how to install Google Chrome on your computer easily.",
+        "keywords": ["Install Chrome", "Download Chrome"]
+    }
+}
