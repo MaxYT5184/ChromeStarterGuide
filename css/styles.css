@@ -36,3 +36,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+footer.dark-mode {
+    background-color: #1f1f1f;
+}
