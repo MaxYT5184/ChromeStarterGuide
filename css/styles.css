@@ -47,3 +47,27 @@ header.dark-mode {
 footer.dark-mode {
     background-color: #1f1f1f;
 }
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 300px;
+}
+
+.slide.active {
+    display: block;
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
