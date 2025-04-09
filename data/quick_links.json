@@ -1,0 +1,7 @@
+{
+    "home": "../index.html",
+    "install_chrome": "../guides/install_chrome.html",
+    "chrome_flags": "../guides/chrome_flags.html",
+    "extensions": "../guides/extensions.html",
+    "themes": "../guides/themes.html"
+}
