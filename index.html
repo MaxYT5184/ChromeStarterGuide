@@ -4,37 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChromeStarterGuide</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #121212;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/41810341995087.57bd505fc7b34.gif');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #themeToggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            background-color: #008cba;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        main {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #008cba;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        section {
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* FAQs Section */
+        .faq {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #008cba;
+            color: #fff;
+            border: none;
+            text-align: left;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .faq:hover {
+            background-color: #005f8a;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #555;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #000;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode footer {
+            background-color: #1f1f1f;
+        }
+    </style>
 </head>
 <body>
-    <div class="background">
+    <!-- Banner Section -->
+    <section class="banner">
         <header>
             <h1>Welcome to ChromeStarterGuide</h1>
-            <button id="themeToggle">Toggle Dark Mode</button>
-            <nav>
-                <ul>
-                    <li><a href="guides/install_chrome.html">Install Chrome</a></li>
-                    <li><a href="guides/chrome_flags.html">Chrome Flags</a></li>
-                    <li><a href="guides/extensions.html">Extensions</a></li>
-                    <li><a href="guides/themes.html">Themes</a></li>
-                    <li><a href="guides/productivity_hacks.html">Productivity Hacks</a></li>
-                </ul>
-            </nav>
+            <div class="theme-toggle">
+                <button id="themeToggle">
+                    <span id="themeIcon">🌞</span>
+                </button>
+            </div>
+        </header>
+        <div class="search-bar">
             <form id="searchForm">
-                <input type="text" id="searchInput" placeholder="Search guides..." />
+                <input type="text" id="searchInput" placeholder="Search guides, FAQs, or features...">
                 <button type="submit">Search</button>
             </form>
-        </header>
-        <main>
-            <p>
-                Welcome to ChromeStarterGuide, the resource for transforming your Google Chrome experience. From installation tutorials to customizing themes, extensions, and experimental features, we cover it all. Get ready to master your new browser with ease and style.
-            </p>
-        </main>
-        <footer>
-            <p>&copy; 2025 ChromeStarterGuide. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="js/theme.js"></script>
-    <script src="js/search.js"></script>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main>
+        <!-- Guide 1: Install Chrome -->
+        <section id="install-chrome">
+            <h2>How to Install Google Chrome</h2>
+            <p>Follow these steps to install Chrome:</p>
+            <ol>
+                <li>Visit the <a href="https://www.google.com/chrome/" target="_blank">official Chrome website</a>.</li>
+                <li>Click "Download Chrome" and install the setup file.</li>
+                <li>Log in with your Google account.</li>
+            </ol>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/kpYyPznkCxw" 
+            title="Install Chrome Tutorial" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs">
+            <h2>FAQs</h2>
+            <button class="faq">What is Google Chrome?</button>
+            <div class="faq-content">Google Chrome is a fast, free web browser developed by Google.</div>
+
+            <button class="faq">How do I update Chrome?</button>
+            <div class="faq-content">Go to Chrome Menu > Help > About Google Chrome, and it will update automatically if needed.</div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h2>Downloadable Resources</h2>
+            <p>Get additional resources to enhance your learning:</p>
+            <ul>
+                <li><a href="resources/chrome_installation_guide.pdf" target="_blank">Chrome Installation Guide (PDF)</a></li>
+                <li><a href="resources/chrome_tips_and_tricks.pdf" target="_blank">Chrome Tips and Tricks (PDF)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ChromeStarterGuide. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle with Sun/Moon Icons
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = '🌞';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Search Functionality
+        const searchForm = document.getElementById('searchForm');
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            if (query.includes('install')) {
+                window.location.href = '#install-chrome';
+            } else if (query.includes('faqs')) {
+                window.location.href = '#faqs';
+            } else if (query.includes('resources')) {
+                window.location.href = '#resources';
+            } else {
+                alert('No results found. Try another keyword.');
+            }
+        });
+
+        // FAQs Toggle Functionality
+        const faqs = document.querySelectorAll('.faq');
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                const content = faq.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
