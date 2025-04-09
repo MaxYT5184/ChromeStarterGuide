@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Welcome to ChromeStarterGuide</h1>
+        <button id="themeToggle">Toggle Dark Mode</button>
         <nav>
             <ul>
                 <li><a href="guides/install_chrome.html">Install Chrome</a></li>
@@ -18,34 +19,20 @@
                 <li><a href="guides/productivity_hacks.html">Productivity Hacks</a></li>
             </ul>
         </nav>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search guides..." />
+            <button type="submit">Search</button>
+        </form>
     </header>
     <main>
-        <p>Welcome to ChromeStarterGuide
-
-Congratulations on embarking on your journey with your first computer! Whether you're entirely new to the digital world or exploring new tools, this website is here to help you master Google Chrome—the gateway to the internet for millions of users worldwide.
-
-Google Chrome is more than just a browser; it's a versatile platform for productivity, entertainment, and customization. Here at ChromeStarterGuide, we aim to simplify the process of setting up and optimizing Chrome for first-time users and even seasoned enthusiasts. From installation and basic settings to advanced features and themes, you'll find everything you need to make your browsing experience smooth, secure, and personalized.
-
-What Can You Expect Here?
-Step-by-Step Installation Guides: We'll walk you through downloading and installing Google Chrome on your device. No tech jargon, just simple steps anyone can follow.
-
-Exploring Chrome Flags: Learn about experimental settings and unlock powerful features that are hidden from the default experience.
-
-Essential Extensions for Every Need: Discover the most useful Chrome extensions to block ads, manage distractions, enhance security, and improve productivity.
-
-Customizing Your Browser: Make Chrome truly yours with themes, wallpapers, and new tab customizations. Find out how to create a browsing experience that reflects your personality and style.
-
-Productivity and Browsing Hacks: Get practical tips and tricks to make the most of Chrome's features, from tab management shortcuts to profile setups for work and leisure.
-
-Troubleshooting Help: Encountering issues like slow browsing or website errors? Our troubleshooting section is packed with solutions to common Chrome problems.
-
-Why ChromeStarterGuide?
-We understand that starting with a new computer and browser can feel overwhelming, but we're here to make it easy and enjoyable. This website is thoughtfully crafted to provide clear explanations, helpful visuals, and actionable advice, ensuring you get the most out of your Google Chrome experience. We are passionate about empowering users with the knowledge they need to explore the internet confidently and efficiently.
-
-So, what are you waiting for? Dive into our guides and take control of your browsing journey. Whether you're personalizing your new tab page, boosting your productivity, or creating a safe browsing environment, ChromeStarterGuide is your partner in mastering Google Chrome.</p>
+        <p>
+            Congratulations on your first computer! ChromeStarterGuide is your ultimate resource for customizing and mastering Google Chrome. From installation to advanced features, explore our comprehensive guides to make Chrome truly yours.
+        </p>
     </main>
     <footer>
         <p>&copy; 2025 ChromeStarterGuide. All rights reserved.</p>
     </footer>
+    <script src="js/theme.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
