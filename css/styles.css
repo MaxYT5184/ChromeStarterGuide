@@ -71,3 +71,10 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
