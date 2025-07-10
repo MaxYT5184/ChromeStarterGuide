@@ -1,292 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChromeStarterGuide</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            background-color: #121212;
-            overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        a {
-            text-decoration: none;
-            color: #00d1b2;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header and Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav {
-            display: flex;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            font-size: 1rem;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            color: #00d1b2;
-        }
-
-        /* Mobile Sidebar Menu */
-        .menu-icon {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .sidebar {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            z-index: 1001;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 20px;
-        }
-
-        .sidebar ul li a {
-            font-size: 1.2rem;
-        }
-
-        .sidebar .close-btn {
-            display: block;
-            text-align: right;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        /* Search Bar */
-        .search-bar {
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input {
-            padding: 10px;
-            width: 200px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        .search-bar button {
-            padding: 10px;
-            margin-left: 10px;
-            background-color: #00d1b2;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        p, li {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-
-        header.dark-mode {
-            background-color: rgba(50, 50, 50, 0.8);
-        }
-
-        footer.dark-mode {
-            background-color: #1f1f1f;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .search-bar {
-                top: 60px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .search-bar input {
-                width: 70%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Starter Guide</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">ChromeStarterGuide</div>
-        <div class="menu-icon" id="menuIcon">☰</div>
-        <nav>
-            <ul>
-                <li><a href="#install-chrome">Install Chrome</a></li>
-                <li><a href="#chrome-flags">Chrome Flags</a></li>
-                <li><a href="#extensions">Extensions</a></li>
-                <li><a href="#themes">Themes</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Sidebar for Mobile -->
-    <div class="sidebar" id="sidebar">
-        <div class="close-btn" id="closeSidebar">×</div>
-        <ul>
-            <li><a href="#install-chrome">Install Chrome</a></li>
-            <li><a href="#chrome-flags">Chrome Flags</a></li>
-            <li><a href="#extensions">Extensions</a></li>
-            <li><a href="#themes">Themes</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-        </ul>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search guides, FAQs, or features...">
-        <button id="searchButton">Search</button>
-    </div>
-
-    <!-- Content Sections -->
-    <main>
-        <section id="install-chrome">
-            <h2>How to Install Google Chrome</h2>
-            <p>Follow these steps to install Chrome:</p>
-            <ol>
-                <li>Visit the <a href="https://www.google.com/chrome/" target="_blank">official Chrome website</a>.</li>
-                <li>Click "Download Chrome" and install the setup file.</li>
-                <li>Log in with your Google account.</li>
-            </ol>
-        </section>
-
-        <!-- More pages added here... -->
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 ChromeStarterGuide. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDarkMode = body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-        });
-
-        // Mobile Sidebar Toggle
-        const menuIcon = document.getElementById('menuIcon');
-        const sidebar = document.getElementById('sidebar');
-        const closeSidebar = document.getElementById('closeSidebar');
-
-        menuIcon.addEventListener('click', () => {
-            sidebar.style.display = 'block';
-        });
-
-        closeSidebar.addEventListener('click', () => {
-            sidebar.style.display = 'none';
-        });
-
-        // Search Functionality
-        const searchButton = document.getElementById('searchButton');
-        searchButton.addEventListener('click', () => {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            if (query.includes('install')) {
-                window.location.href = '#install-chrome';
-            } else {
-                alert('No results found!');
-            }
-        });
-    </script>
+  <header>
+    <h1>Chrome Starter Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="install-code.html">Install Code</a></li>
+        <li><a href="chrome-flags.html">Chrome Flags</a></li>
+        <li><a href="extensions.html">Extensions</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="setup-profile.html">Setup Google Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome to ChromeStarterGuide</h2>
+    <p>This guide is your complete resource to setting up, customizing, and optimizing Google Chrome. Whether you're a casual user or a developer, this guide will walk you through every step.</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 ChromeStarterGuide. All rights reserved.</p>
+  </footer>
 </body>
 </html>
